@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/ergogen-gui/static/css/main.a0c9cf88.chunk.css",
-    "main.js": "/ergogen-gui/static/js/main.deacd4e3.chunk.js",
-    "main.js.map": "/ergogen-gui/static/js/main.deacd4e3.chunk.js.map",
+    "main.js": "/ergogen-gui/static/js/main.d7703ee1.chunk.js",
+    "main.js.map": "/ergogen-gui/static/js/main.d7703ee1.chunk.js.map",
     "runtime-main.js": "/ergogen-gui/static/js/runtime-main.ab5a80c6.js",
     "runtime-main.js.map": "/ergogen-gui/static/js/runtime-main.ab5a80c6.js.map",
     "static/js/2.5f186631.chunk.js": "/ergogen-gui/static/js/2.5f186631.chunk.js",
     "static/js/2.5f186631.chunk.js.map": "/ergogen-gui/static/js/2.5f186631.chunk.js.map",
     "index.html": "/ergogen-gui/index.html",
     "static/css/main.a0c9cf88.chunk.css.map": "/ergogen-gui/static/css/main.a0c9cf88.chunk.css.map",
-    "static/js/2.5f186631.chunk.js.LICENSE.txt": "/ergogen-gui/static/js/2.5f186631.chunk.js.LICENSE.txt"
+    "static/js/2.5f186631.chunk.js.LICENSE.txt": "/ergogen-gui/static/js/2.5f186631.chunk.js.LICENSE.txt",
+    "static/media/cacheworks.f36b31a4.svg": "/ergogen-gui/static/media/cacheworks.f36b31a4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ab5a80c6.js",
     "static/js/2.5f186631.chunk.js",
     "static/css/main.a0c9cf88.chunk.css",
-    "static/js/main.deacd4e3.chunk.js"
+    "static/js/main.d7703ee1.chunk.js"
   ]
 }
