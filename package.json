@@ -1,7 +1,7 @@
 {
   "name": "ergogen-gui",
   "version": "0.1.0",
-  "homepage": "https://mveerd.github.io/ergogen-gui",
+  "homepage": "https://ergogen.cache.works/",
   "private": false,
   "dependencies": {
     "@monaco-editor/react": "^4.2.2",
