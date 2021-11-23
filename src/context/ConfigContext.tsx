@@ -2,6 +2,7 @@ import React, {createContext, Dispatch, SetStateAction, useCallback, useContext,
 import { DebouncedFunc } from "lodash-es";
 import yaml from "js-yaml";
 import debounce from "lodash.debounce";
+import * as Ergo from 'ergogen';
 
 type Props = {
     initialInput: string,
@@ -81,7 +82,7 @@ const ConfigContextProvider = ({initialInput, children}: Props) => {
             }
 
             try {
-                results = await window.ergogen.process(
+                results = await Ergo.process(
                     inputConfig,
                     debug, // debug
                     (m: string) => console.log(m) // logger
@@ -102,7 +103,7 @@ const ConfigContextProvider = ({initialInput, children}: Props) => {
             setResults(results);
 
         }, 300),
-        [window.ergogen]
+        [Ergo]
     );
 
     useEffect(() => {

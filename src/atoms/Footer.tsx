@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {ReactComponent as CacheWorksLogo} from './cacheworks.svg';
+// @ts-ignore
+import * as Ergo from 'ergogen';
 
 declare global {
     interface Window {
@@ -34,7 +36,7 @@ const Footer = (): JSX.Element => {
                 <CacheWorksLogo />
             </div>
             <div>
-                v{window.ergogen.version}
+               v{Ergo.version}
             </div>
         </FooterContainer>
     );
