@@ -1170,6 +1170,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.12.0", "@babel/runtime@^7.13.10", "@babel/runtime@^7.8.7":
+  version "7.16.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
+  integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.12.5", "@babel/runtime@^7.9.2":
   version "7.15.4"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.15.4.tgz"
@@ -1265,6 +1272,27 @@
   resolved "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-10.1.0.tgz"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
+"@danmarshall/jscad-typings@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@danmarshall/jscad-typings/-/jscad-typings-1.0.0.tgz#87dfb9c49a21cbbdfd54feb20e57544374809102"
+  integrity sha512-MGGIGDItK2UQSsz7yTrXErQXDAFXR3UPxyQ7WZ5RHOwnv60CBXjmkJlXYMYPkSvo+7fUuQL2/ODcvECtc/fi9g==
+
+"@emotion/cache@^11.4.0", "@emotion/cache@^11.6.0":
+  version "11.6.0"
+  resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-11.6.0.tgz#65fbdbbe4382f1991d8b20853c38e63ecccec9a1"
+  integrity sha512-ElbsWY1KMwEowkv42vGo0UPuLgtPYfIs9BxxVrmvsaJVvktknsHYYlx5NQ5g6zLDcOTyamlDc7FkRg2TAcQDKQ==
+  dependencies:
+    "@emotion/memoize" "^0.7.4"
+    "@emotion/sheet" "^1.1.0"
+    "@emotion/utils" "^1.0.0"
+    "@emotion/weak-memoize" "^0.2.5"
+    stylis "^4.0.10"
+
+"@emotion/hash@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
+  integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
+
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz"
@@ -1277,15 +1305,59 @@
   resolved "https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.4.tgz"
   integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
 
+"@emotion/memoize@^0.7.4":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.5.tgz#2c40f81449a4e554e9fc6396910ed4843ec2be50"
+  integrity sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==
+
+"@emotion/react@^11.1.1":
+  version "11.6.0"
+  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.6.0.tgz#61fcb95c1e01255734c2c721cb9beabcf521eb0f"
+  integrity sha512-23MnRZFBN9+D1lHXC5pD6z4X9yhPxxtHr6f+iTGz6Fv6Rda0GdefPrsHL7otsEf+//7uqCdT5QtHeRxHCERzuw==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@emotion/cache" "^11.6.0"
+    "@emotion/serialize" "^1.0.2"
+    "@emotion/sheet" "^1.1.0"
+    "@emotion/utils" "^1.0.0"
+    "@emotion/weak-memoize" "^0.2.5"
+    hoist-non-react-statics "^3.3.1"
+
+"@emotion/serialize@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.0.2.tgz#77cb21a0571c9f68eb66087754a65fa97bfcd965"
+  integrity sha512-95MgNJ9+/ajxU7QIAruiOAdYNjxZX7G2mhgrtDWswA21VviYIRP1R5QilZ/bDY42xiKsaktP4egJb3QdYQZi1A==
+  dependencies:
+    "@emotion/hash" "^0.8.0"
+    "@emotion/memoize" "^0.7.4"
+    "@emotion/unitless" "^0.7.5"
+    "@emotion/utils" "^1.0.0"
+    csstype "^3.0.2"
+
+"@emotion/sheet@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.1.0.tgz#56d99c41f0a1cda2726a05aa6a20afd4c63e58d2"
+  integrity sha512-u0AX4aSo25sMAygCuQTzS+HsImZFuS8llY8O7b9MDRzbJM0kVJlAz6KNDqcG7pOuQZJmj/8X/rAW+66kMnMW+g==
+
 "@emotion/stylis@^0.8.4":
   version "0.8.5"
   resolved "https://registry.npmjs.org/@emotion/stylis/-/stylis-0.8.5.tgz"
   integrity sha512-h6KtPihKFn3T9fuIrwvXXUOwlx3rfUvfZIcP5a6rh8Y7zjE3O06hT5Ss4S/YI1AYhuZ1kjaE/5EaOOI2NqSylQ==
 
-"@emotion/unitless@^0.7.4":
+"@emotion/unitless@^0.7.4", "@emotion/unitless@^0.7.5":
   version "0.7.5"
   resolved "https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.5.tgz"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
+
+"@emotion/utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-1.0.0.tgz#abe06a83160b10570816c913990245813a2fd6af"
+  integrity sha512-mQC2b3XLDs6QCW+pDQDiyO/EdGZYOygE8s5N5rrzjSI4M3IejPE/JPndCBwRT9z982aqQNi6beWs1UeayrQxxA==
+
+"@emotion/weak-memoize@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
+  integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
 "@eslint/eslintrc@^0.3.0":
   version "0.3.0"
@@ -1594,6 +1666,16 @@
     strip-bom "^3.0.0"
     webworkify "^1.4.0"
 
+"@jscad/csg@0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@jscad/csg/-/csg-0.3.6.tgz#4fc13667c4130b3010328d7587fe5d9328712ced"
+  integrity sha512-GoUXhTwO0L+Cxba8VfFFLGm+ECd0xZKoIAPpeUYsDiCVsIZ6XK+3GLgBgn5waeumQNh+H6WsHjMMRKXBrDBreA==
+
+"@jscad/csg@0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@jscad/csg/-/csg-0.3.7.tgz#47855c23a9fe2f20e971607417b807a1aedc57fc"
+  integrity sha512-CuqKgXEZDH1FzbwQTdMWQ0FiEGi+LrP32tP6nW6rdWEEBjL6w19F3OrShD7SP8mK9IcqiuhgN9JcbWaiBswWlQ==
+
 "@jscad/csg@0.7.0", "@jscad/csg@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@jscad/csg/-/csg-0.7.0.tgz#a6b17e60cc88bbf81fd00024abb394e2ab42687f"
@@ -1605,6 +1687,11 @@
   integrity sha512-rk9A2WpOlov4TsXdgVi98Zguwa+R1F+p4G6a5SSGiq1GfhNnah/FO1eybY9kZNSHhuckHK/ziSs8NgL96/p0iw==
   dependencies:
     "@jscad/csg" "^0.7.0"
+
+"@jscad/dxf-serializer@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@jscad/dxf-serializer/-/dxf-serializer-0.0.4.tgz#3fb3b76b61e6a987e250827c49634f00736f6ac8"
+  integrity sha1-P7O3a2HmqYfiUIJ8SWNPAHNvasg=
 
 "@jscad/dxf-serializer@^0.2.4":
   version "0.2.5"
@@ -1619,12 +1706,17 @@
   resolved "https://registry.yarnpkg.com/@jscad/examples/-/examples-1.7.2.tgz#471acc0211175459fd810c3a09fe3496440d4c85"
   integrity sha512-WbZwU+KV2XMMZ99gJEyX8CmE8k6QM2JwXXsvcUCFiC6V0LOE7k6zXVuH6fTPy1VJa54U3m9dzlGVcP1XzZ0Rag==
 
+"@jscad/gcode-deserializer@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@jscad/gcode-deserializer/-/gcode-deserializer-0.0.4.tgz#a5d93ecef846bf30a596f5021d7b36ea62a13a27"
+  integrity sha1-pdk+zvhGvzCllvUCHXs26mKhOic=
+
 "@jscad/gcode-deserializer@^0.2.0":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@jscad/gcode-deserializer/-/gcode-deserializer-0.2.1.tgz#224e515d690a9ef9ff2557586aee233638c7da32"
   integrity sha512-Gn5emOcE6cjRdaSlzcDDYe/5spSXNG6FlnoXGX5ciIo04UHJjYvJN6i9YRRCiypX3rFvxfR84LaST2PxIbrsQw==
 
-"@jscad/io-utils@^0.1.3":
+"@jscad/io-utils@^0.1.2", "@jscad/io-utils@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@jscad/io-utils/-/io-utils-0.1.3.tgz#ddc4ea914606c085b64ed20919a1973b3f47ac51"
   integrity sha512-aCVUZovewI4njtEJ1fvjhasqd8EHIzQaPb88MtFWf/ff1NdGOu/vRH3yGG8vu0NZektGEDCKp028g2nTBL7aFg==
@@ -1649,12 +1741,42 @@
     "@jscad/svg-serializer" "^0.1.3"
     "@jscad/x3d-serializer" "^0.1.2"
 
+"@jscad/io@github:mrzealot/oldjscadio":
+  version "0.3.7"
+  resolved "https://codeload.github.com/mrzealot/oldjscadio/tar.gz/692cf142062208b0097b2d4852c30d6cc51eea8d"
+  dependencies:
+    "@jscad/dxf-serializer" "^0.0.4"
+    "@jscad/gcode-deserializer" "^0.0.4"
+    "@jscad/io-utils" "^0.1.2"
+    "@jscad/json-deserializer" "^0.0.4"
+    "@jscad/json-serializer" "^0.0.5"
+    "@jscad/obj-deserializer" "^0.0.4"
+    "@jscad/stl-deserializer" "^0.1.2"
+    "@jscad/stl-serializer" "^0.0.6"
+    "@jscad/svg-deserializer" "^0.2.3"
+    "@jscad/svg-serializer" "^0.0.4"
+
+"@jscad/json-deserializer@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@jscad/json-deserializer/-/json-deserializer-0.0.4.tgz#7dfa500945288792e04e571a0c24f15c55eebab0"
+  integrity sha1-ffpQCUUoh5LgTlcaDCTxXFXuurA=
+  dependencies:
+    "@jscad/csg" "0.3.6"
+
 "@jscad/json-deserializer@^0.1.2":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@jscad/json-deserializer/-/json-deserializer-0.1.3.tgz#a4e1a370742c1c895530233c130f7547e8f4d760"
   integrity sha512-8zvtCqfYL7nBFJ8fj9Oqo5VuplzU9kupUJBjumkYTEvUUkr63Nv0U7slse0Tu8ZkpYc2rjbpBBZHXosCchicsQ==
   dependencies:
     "@jscad/csg" "0.7.0"
+
+"@jscad/json-serializer@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@jscad/json-serializer/-/json-serializer-0.0.5.tgz#0c4010cfb6729edb2942727272f941d1301947b8"
+  integrity sha1-DEAQz7ZyntspQnJycvlB0TAZR7g=
+  dependencies:
+    "@jscad/csg" "0.3.6"
+    "@jscad/io-utils" "^0.1.2"
 
 "@jscad/json-serializer@^0.1.2":
   version "0.1.2"
@@ -1664,12 +1786,40 @@
     "@jscad/csg" "0.7.0"
     "@jscad/io-utils" "^0.1.3"
 
+"@jscad/obj-deserializer@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@jscad/obj-deserializer/-/obj-deserializer-0.0.4.tgz#dcb3cf5cc47278a7cf7a35b76b32ead0d044dfc3"
+  integrity sha1-3LPPXMRyeKfPejW3azLq0NBE38M=
+
 "@jscad/obj-deserializer@^0.2.1":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@jscad/obj-deserializer/-/obj-deserializer-0.2.3.tgz#11204261bf657f681bfdcb0558772f6911a6a152"
   integrity sha512-txwW8ESSz2WtwlcfVnr+S1IGPJLZt/QA1aXRNGqsYLacLyYN6EIWu4DEjmz6ebQ2KUgwHgiCE1l6bl+bJ+3NIA==
   dependencies:
     "@jscad/csg" "^0.7.0"
+
+"@jscad/openjscad@github:mrzealot/oldjscad":
+  version "1.6.1"
+  resolved "https://codeload.github.com/mrzealot/oldjscad/tar.gz/0397e0f35aa9319005a2e64aa1419022423857de"
+  dependencies:
+    "@jscad/csg" "0.3.6"
+    "@jscad/io" "github:mrzealot/oldjscadio"
+    "@jscad/openscad-openjscad-translator" "0.0.10"
+    "@jscad/scad-api" "^0.5.1"
+    astring "^1.0.2"
+    brace "0.10.0"
+    esprima "^3.1.3"
+    estraverse "^4.2.0"
+    most-gestures "^0.3.0"
+    webworkify "^1.4.0"
+
+"@jscad/openscad-openjscad-translator@0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@jscad/openscad-openjscad-translator/-/openscad-openjscad-translator-0.0.10.tgz#6f5a3dc252fd20baf523ab11c1fc2a3ddaa57e7b"
+  integrity sha1-b1o9wlL9ILr1I6sRwfwqPdqlfns=
+  dependencies:
+    lodash "^4.17.4"
+    sylvester "github:kaosat-dev/node-sylvester"
 
 "@jscad/openscad-openjscad-translator@0.0.11":
   version "0.0.11"
@@ -1679,6 +1829,21 @@
     "@kaosat-dev/sylvester" "0.0.21"
     lodash "^4.17.4"
 
+"@jscad/scad-api@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@jscad/scad-api/-/scad-api-0.5.1.tgz#d75b532ea1bd2ff6f34617f98346365500587d9a"
+  integrity sha512-1BlfqcAf0xIicbaKU1bCOxHh0+aHJ7fBRY6r+7/e+0uMrfoqHoULGqkAZCwnftt0cPj5uAP8JSlyOinHKaFIJw==
+  dependencies:
+    "@jscad/csg" "0.3.7"
+
+"@jscad/stl-deserializer@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@jscad/stl-deserializer/-/stl-deserializer-0.1.2.tgz#3f4e5030c8c181fe97c278b3e6974ea237a63383"
+  integrity sha1-P05QMMjBgf6Xwniz5pdOojemM4M=
+  dependencies:
+    "@jscad/csg" "0.3.6"
+    "@jscad/io-utils" "^0.1.2"
+
 "@jscad/stl-deserializer@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jscad/stl-deserializer/-/stl-deserializer-0.3.3.tgz#81857ee9088d5c9de5767f29b4dac4c58b82caf5"
@@ -1686,6 +1851,13 @@
   dependencies:
     "@jscad/csg" "0.7.0"
     "@jscad/io-utils" "^0.1.3"
+
+"@jscad/stl-serializer@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@jscad/stl-serializer/-/stl-serializer-0.0.6.tgz#3880ee3b0d98cde621a5583dd860dc37a90066d4"
+  integrity sha1-OIDuOw2YzeYhpVg92GDcN6kAZtQ=
+  dependencies:
+    "@jscad/io-utils" "^0.1.2"
 
 "@jscad/stl-serializer@^0.1.3":
   version "0.1.3"
@@ -1701,6 +1873,14 @@
   dependencies:
     "@jscad/io-utils" "^0.1.3"
 
+"@jscad/svg-deserializer@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@jscad/svg-deserializer/-/svg-deserializer-0.2.3.tgz#1db1552926b1ec9ef25cb8d8134af265f60e4d22"
+  integrity sha1-HbFVKSax7J7yXLjYE0ryZfYOTSI=
+  dependencies:
+    "@jscad/csg" "0.3.6"
+    sax "1.2.4"
+
 "@jscad/svg-deserializer@^0.4.2":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@jscad/svg-deserializer/-/svg-deserializer-0.4.3.tgz#21e70effd29541941982305a2ed25482c5d18ea9"
@@ -1708,6 +1888,13 @@
   dependencies:
     "@jscad/csg" "0.7.0"
     sax "1.2.4"
+
+"@jscad/svg-serializer@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@jscad/svg-serializer/-/svg-serializer-0.0.4.tgz#baa6237d33ed6e0f7a012f2bb60613a295e251d1"
+  integrity sha1-uqYjfTPtbg96AS8rtgYTopXiUdE=
+  dependencies:
+    "@jscad/csg" "0.3.6"
 
 "@jscad/svg-serializer@^0.1.3":
   version "0.1.3"
@@ -2060,6 +2247,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/bezier-js@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@types/bezier-js/-/bezier-js-0.0.6.tgz#0d976d68163c4955332ef798a21a0b3d6381d12b"
+  integrity sha1-DZdtaBY8SVUzLveYohoLPWOB0Ss=
+
 "@types/eslint@^7.2.6":
   version "7.2.6"
   resolved "https://registry.npmjs.org/@types/eslint/-/eslint-7.2.6.tgz"
@@ -2187,15 +2379,32 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.9.4.tgz#a12f0ee7847cf17a97f6fdf1093cb7a9af23cca4"
   integrity sha512-KDazLNYAGIuJugdbULwFZULF9qQ13yNWEBFnfVpqlpgAAo6H/qnM9RjBgh0A0kmHf3XxAKLdN5mTIng9iUvVLA==
 
+"@types/node@^7.0.5":
+  version "7.10.14"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.10.14.tgz#06fa7319b8131b969a8da4a14c487e6f28abacf7"
+  integrity sha512-29GS75BE8asnTno3yB6ubOJOO0FboExEqNJy4bpz0GSmW/8wPTNL4h9h63c6s1uTrOopCmJYe/4yJLh5r92ZUA==
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz"
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
+"@types/opentype.js@^0.7.0":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@types/opentype.js/-/opentype.js-0.7.2.tgz#ced5b117a5736578c6b9d835e35b0204c6ef2e8f"
+  integrity sha512-Riz6WyBUBEFs7YqSsJya3SbDHJZ6BmMkY7bzNoue6rtwj+RNilLc+mgOX/eJ0Y0asq16FSU6DatBeOg8ZMy2UQ==
+
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+
+"@types/pdfkit@^0.7.34":
+  version "0.7.36"
+  resolved "https://registry.yarnpkg.com/@types/pdfkit/-/pdfkit-0.7.36.tgz#d7241454e2ae94ee0bed684e712fbfdc2b3e0e6f"
+  integrity sha512-9eRA6MuW+n78yU3HhoIrDxjyAX2++B5MpLDYqHOnaRTquCw+5sYXT+QN8E1eSaxvNUwlRfU3tOm4UzTeGWmBqg==
+  dependencies:
+    "@types/node" "*"
 
 "@types/prettier@^2.0.0":
   version "2.2.1"
@@ -2216,6 +2425,13 @@
   version "17.0.9"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
   integrity sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-transition-group@^4.4.0":
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.4.tgz#acd4cceaa2be6b757db61ed7b432e103242d163e"
+  integrity sha512-7gAPz7anVK5xzbeQW9wFBDg7G++aPLAFY0QaSMOou9rJZpbuI58WAuJrgu+qR92l61grlnCUe7AFX8KGahAgug==
   dependencies:
     "@types/react" "*"
 
@@ -2990,7 +3206,7 @@ astral-regex@^2.0.0:
   resolved "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-astring@^1.3.1:
+astring@^1.0.2, astring@^1.3.1:
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.7.5.tgz#a7d47fceaf32b052d33a3d07c511efeec67447ca"
   integrity sha512-lobf6RWXb8c4uZ7Mdq0U12efYmpD1UFnyOWVJPTa3ukqZrMopav+2hdNu0hgBF0JIBFK9QgrBDfwYvh3DFJDAA==
@@ -3273,6 +3489,11 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+bezier-js@^2.1.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/bezier-js/-/bezier-js-2.6.1.tgz#ed9c6ebfcb3214794ff213cf90ee8aac644ecf7f"
+  integrity sha512-jelZM33eNzcZ9snJ/5HqJLw3IzXvA8RFcBjkdOB8SDYyOvW8Y2tTosojAiBTnD1MhbHoWUYNbxUXxBl61TxbRg==
 
 bfj@^7.0.2:
   version "7.0.2"
@@ -3838,6 +4059,11 @@ cliui@^6.0.0:
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
 
+clone@^1.0.2:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
+  integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.npmjs.org/co/-/co-4.6.0.tgz"
@@ -3936,6 +4162,11 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
+
+complex.js@^2.0.11:
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/complex.js/-/complex.js-2.0.15.tgz#7add6848b4c1d12aa9262f7df925ebe7a51a7406"
+  integrity sha512-gDBvQU8IG139ZBQTSo2qvDFP+lANMGluM779csXOr6ny1NUtA3wkUnCFjlDNH/moAVfXtvClYt6G0zarFbtz5w==
 
 component-emitter@^1.2.1:
   version "1.3.0"
@@ -4509,6 +4740,11 @@ decimal.js@^10.2.0:
   resolved "https://registry.npmjs.org/decimal.js/-/decimal.js-10.2.1.tgz"
   integrity sha512-KaL7+6Fw6i5A2XSnsbhm/6B+NuEA7TZ4vqxnd5tXz9sbKtrN9Srj8ab4vKVdK8YAqZO9P1kg45Y6YLoduPf+kw==
 
+decimal.js@^10.2.1:
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.3.1.tgz#d8c3a444a9c6774ba60ca6ad7261c3a94fd5e783"
+  integrity sha512-V0pfhfr8suzyPGOx3nmq4aHqabehUZn6Ch9kyFpV79TGDTWFmHqUqXdabR7QHqxzrYolF4+tVmJhUG4OURg5dQ==
+
 decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.0.tgz"
@@ -4712,6 +4948,14 @@ dom-converter@^0.2:
   dependencies:
     utila "~0.4"
 
+dom-helpers@^5.0.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
+  integrity sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+    csstype "^3.0.2"
+
 dom-serializer@0:
   version "0.2.2"
   resolved "https://registry.npmjs.org/dom-serializer/-/dom-serializer-0.2.2.tgz"
@@ -4906,6 +5150,18 @@ entities@^2.0.0:
   resolved "https://registry.npmjs.org/entities/-/entities-2.2.0.tgz"
   integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
 
+"ergogen@github:MvEerd/ergogen#mveerd":
+  version "9.9.9-mveerd-c4fcdefe"
+  resolved "https://codeload.github.com/MvEerd/ergogen/tar.gz/a7c77d9bafd104b8416e80fd14761631f20019c9"
+  dependencies:
+    "@jscad/openjscad" "github:mrzealot/oldjscad"
+    fs-extra "^9.0.1"
+    js-yaml "^3.14.0"
+    kle-serial "github:mrzealot/kle-serial"
+    makerjs "github:mrzealot/maker.js-dist"
+    mathjs "^8.1.1"
+    yargs "^15.4.1"
+
 errno@^0.1.3, errno@~0.1.7:
   version "0.1.8"
   resolved "https://registry.npmjs.org/errno/-/errno-0.1.8.tgz"
@@ -5032,6 +5288,11 @@ escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
+
+escape-latex@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/escape-latex/-/escape-latex-1.2.0.tgz#07c03818cf7dac250cce517f4fda1b001ef2bca1"
+  integrity sha512-nV5aVWW1K0wEiUIEdZ4erkGGH8mDxGyxSeqPzRNtWP7ataw+/olFObw7hujFWlVjNsaDFw5VZ5NzVSIqRgfTiw==
 
 escape-string-regexp@2.0.0, escape-string-regexp@^2.0.0:
   version "2.0.0"
@@ -5827,6 +6088,11 @@ forwarded@~0.1.2:
   resolved "https://registry.npmjs.org/forwarded/-/forwarded-0.1.2.tgz"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
 
+fraction.js@^4.0.13:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.1.2.tgz#13e420a92422b6cf244dff8690ed89401029fbe8"
+  integrity sha512-o2RiJQ6DZaR/5+Si0qJUIy637QMRudSi9kU/FFzx9EZazrIdnBgpU+3sEWCxAVhH2RtxW2Oz+T4p2o8uOPVcgA==
+
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npmjs.org/fragment-cache/-/fragment-cache-0.2.1.tgz"
@@ -6124,6 +6390,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.6.tgz"
   integrity sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==
 
+graham_scan@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/graham_scan/-/graham_scan-1.0.4.tgz#399651dd1f8353e1880f59ea8e5f94b9df4c928a"
+  integrity sha1-OZZR3R+DU+GID1nqjl+Uud9Mkoo=
+
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.npmjs.org/growly/-/growly-1.3.0.tgz"
@@ -6266,7 +6537,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.1:
   version "3.3.2"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -7067,6 +7338,11 @@ istanbul-reports@^3.0.2:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
+javascript-natural-sort@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/javascript-natural-sort/-/javascript-natural-sort-0.7.1.tgz#f9e2303d4507f6d74355a73664d1440fb5a0ef59"
+  integrity sha1-+eIwPUUH9tdDVac2ZNFED7Wg71k=
+
 jest-changed-files@^26.6.2:
   version "26.6.2"
   resolved "https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-26.6.2.tgz"
@@ -7522,7 +7798,7 @@ jest@26.6.0:
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.13.1:
+js-yaml@^3.13.1, js-yaml@^3.14.0:
   version "3.14.1"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
@@ -7631,7 +7907,7 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.1.2:
+json5@^2.1.0, json5@^2.1.2:
   version "2.2.0"
   resolved "https://registry.npmjs.org/json5/-/json5-2.2.0.tgz"
   integrity sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
@@ -7672,6 +7948,11 @@ jsprim@^1.2.2:
     array-includes "^3.1.2"
     object.assign "^4.1.2"
 
+kdbush@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/kdbush/-/kdbush-2.0.1.tgz#90c6128e3001ac68c550d7c9e2f222c0269666f1"
+  integrity sha512-9KqSdmWCkBIisFIGclT0FRagKhI7IVbMyUjsxCFG0Ly1Dg6whlxJ7b9lrq8ifk3X/fGeJzok1R75LQfZTfA5zQ==
+
 killable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/killable/-/killable-1.0.1.tgz"
@@ -7700,6 +7981,12 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.3"
   resolved "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
+
+"kle-serial@github:mrzealot/kle-serial":
+  version "0.15.1"
+  resolved "https://codeload.github.com/mrzealot/kle-serial/tar.gz/e62d5024cc25455e5ff02746041e269f3429001c"
+  dependencies:
+    json5 "^2.1.0"
 
 kleur@^3.0.3:
   version "3.0.3"
@@ -7959,6 +8246,20 @@ makeerror@1.0.x:
   dependencies:
     tmpl "1.0.x"
 
+"makerjs@github:mrzealot/maker.js-dist":
+  version "0.17.0"
+  resolved "https://codeload.github.com/mrzealot/maker.js-dist/tar.gz/a0ca32948845efe8ad5c9ca454f1285926853138"
+  dependencies:
+    "@danmarshall/jscad-typings" "^1.0.0"
+    "@types/bezier-js" "^0.0.6"
+    "@types/node" "^7.0.5"
+    "@types/opentype.js" "^0.7.0"
+    "@types/pdfkit" "^0.7.34"
+    bezier-js "^2.1.0"
+    clone "^1.0.2"
+    graham_scan "^1.0.4"
+    kdbush "^2.0.1"
+
 map-cache@^0.2.2:
   version "0.2.2"
   resolved "https://registry.npmjs.org/map-cache/-/map-cache-0.2.2.tgz"
@@ -7970,6 +8271,20 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+mathjs@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-8.1.1.tgz#89d6f2fc4a90e9038db3690678a9e1ce563e15ea"
+  integrity sha512-b3TX3EgiZObujjwb8lZnTDLUuivC2jar4ZBjmGJ4stFYCDXx/DNwx5yry5t/z65p9mvejyZel1qoeR05KtChcQ==
+  dependencies:
+    complex.js "^2.0.11"
+    decimal.js "^10.2.1"
+    escape-latex "^1.2.0"
+    fraction.js "^4.0.13"
+    javascript-natural-sort "^0.7.1"
+    seedrandom "^3.0.5"
+    tiny-emitter "^2.1.0"
+    typed-function "^2.0.0"
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -7994,6 +8309,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+memoize-one@^5.0.0:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
+  integrity sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==
 
 memory-fs@^0.4.1:
   version "0.4.1"
@@ -9813,7 +10133,7 @@ prompts@2.4.0, prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2:
+prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -10120,6 +10440,29 @@ react-scripts@4.0.3:
     workbox-webpack-plugin "5.1.4"
   optionalDependencies:
     fsevents "^2.1.3"
+
+react-select@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-5.2.1.tgz#416c25c6b79b94687702374e019c4f2ed9d159d6"
+  integrity sha512-OOyNzfKrhOcw/BlembyGWgdlJ2ObZRaqmQppPFut1RptJO423j+Y+JIsmxkvsZ4D/3CpOmwIlCvWbbAWEdh12A==
+  dependencies:
+    "@babel/runtime" "^7.12.0"
+    "@emotion/cache" "^11.4.0"
+    "@emotion/react" "^11.1.1"
+    "@types/react-transition-group" "^4.4.0"
+    memoize-one "^5.0.0"
+    prop-types "^15.6.0"
+    react-transition-group "^4.3.0"
+
+react-transition-group@^4.3.0:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
+  integrity sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    dom-helpers "^5.0.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
 
 react@^17.0.2:
   version "17.0.2"
@@ -10694,6 +11037,11 @@ schema-utils@^3.0.0:
     "@types/json-schema" "^7.0.6"
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
+
+seedrandom@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/seedrandom/-/seedrandom-3.0.5.tgz#54edc85c95222525b0c7a6f6b3543d8e0b3aa0a7"
+  integrity sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -11410,6 +11758,11 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
+stylis@^4.0.10:
+  version "4.0.10"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.10.tgz#446512d1097197ab3f02fb3c258358c3f7a14240"
+  integrity sha512-m3k+dk7QeJw660eIKRRn3xPF6uuvHs/FFzjX3HQ5ove0qYsiygoAhwn5a3IYKaZPo5LrYD0rfVmtv1gNY1uYwg==
+
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz"
@@ -11462,6 +11815,10 @@ svgo@^1.0.0, svgo@^1.2.2:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+"sylvester@github:kaosat-dev/node-sylvester":
+  version "0.0.21"
+  resolved "https://codeload.github.com/kaosat-dev/node-sylvester/tar.gz/ce74d23a2092ae02a56b840ef70f5d61c54df409"
 
 symbol-observable@^2.0.3:
   version "2.0.3"
@@ -11630,6 +11987,11 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/timsort/-/timsort-0.3.0.tgz"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+
+tiny-emitter@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
+  integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
 
 tmpl@1.0.x:
   version "1.0.4"
@@ -11846,6 +12208,11 @@ type@^2.0.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/type/-/type-2.3.0.tgz"
   integrity sha512-rgPIqOdfK/4J9FhiVrZ3cveAjRRo5rsQBAIhnylX874y1DX/kEKSVdLsnuHB6l1KTjHyU01VjiMBHgU2adejyg==
+
+typed-function@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/typed-function/-/typed-function-2.0.0.tgz#15ab3825845138a8b1113bd89e60cd6a435739e8"
+  integrity sha512-Hhy1Iwo/e4AtLZNK10ewVVcP2UEs408DS35ubP825w/YgSBK1KVLwALvvIG4yX75QJrxjCpcWkzkVRB0BwwYlA==
 
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"

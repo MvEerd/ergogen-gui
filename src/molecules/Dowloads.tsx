@@ -108,7 +108,13 @@ const Downloads = ({setPreview}: Props) => {
       <DownloadsContainer>
           <h3>Downloads</h3>
           {
-              downloads.map((download, i)=><DownloadRow key={i} {...download} setPreview={setPreview}/>)
+              downloads.map(
+                  (download, i) => {
+                      if (download.fileName.startsWith("_")) return false;
+
+                      return <DownloadRow key={i} {...download} setPreview={setPreview}/>;
+                  }
+              )
           }
       </DownloadsContainer>
   );

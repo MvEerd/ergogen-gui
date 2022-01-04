@@ -7,7 +7,8 @@ import FilePreview from "./molecules/FilePreview";
 
 import {useConfigContext} from "./context/ConfigContext";
 import Button from "./atoms/Button";
-
+import Select from "react-select/base";
+import GenOption from "./atoms/GenOption";
 
 const EditorContainer = styled.div`
   position: relative;
@@ -69,11 +70,11 @@ const OptionContainer = styled.div`
 `;
 
 
-function Ergogen() {
+const Ergogen = () => {
     const [previewKey, setPreviewKey] = useState("demo.svg");
 
     const configContext = useConfigContext();
-    if(!configContext) return null;
+    if (!configContext) return null;
 
     const {
         results,
@@ -96,36 +97,13 @@ function Ergogen() {
         <div>
             <FlexContainer>
                     <EditorContainer>
+                        <Select onChange={()=>{}} onInputChange={()=>{}} value={''} inputValue={''}  onMenuClose={()=>{}} onMenuOpen={()=>{}}/>
                         <StyledConfigEditor />
                         <Button onClick={()=>processInput(configInput, { pointsonly: false })}>Generate</Button>
                         <OptionContainer>
-                            <span>
-                                <input
-                                    type={"checkbox"}
-                                    id={"autogen"}
-                                    checked={autoGen}
-                                    onChange={(e)=>setAutoGen(e.target.checked)}
-                                />
-                                <label htmlFor={"autogen"}>Auto-generate</label>
-                            </span>
-                            <span>
-                                <input
-                                    type={"checkbox"}
-                                    id={"debug"}
-                                    checked={debug}
-                                    onChange={(e)=>setDebug(e.target.checked)}
-                                />
-                                <label htmlFor={"debug"}>Debug</label>
-                            </span>
-                            <span>
-                                <input
-                                    type={"checkbox"}
-                                    id={"autogen3d"}
-                                    checked={autoGen3D}
-                                    onChange={(e)=>setAutoGen3D(e.target.checked)}
-                                />
-                                <label htmlFor={"autogen3d"}>Auto-gen 3D <small>(slow)</small></label>
-                            </span>
+                            <GenOption optionId={'autogen'} label={'Auto-generate'} setSelected={setAutoGen} checked={autoGen}/>
+                            <GenOption optionId={'debug'} label={'Debug'} setSelected={setDebug} checked={debug}/>
+                            <GenOption optionId={'autogen3d'} label={<>Auto-gen 3D <small>(slow)</small></>} setSelected={setAutoGen3D} checked={autoGen3D}/>
                         </OptionContainer>
                         {error && <Error>{error.toString()}</Error>}
                     </EditorContainer>

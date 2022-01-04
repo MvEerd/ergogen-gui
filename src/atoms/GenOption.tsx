@@ -1,15 +1,22 @@
+import React, {Dispatch, SetStateAction} from "react";
+
 type Props = {
   optionId: string;
-  label: string;
+  label: React.ReactNode;
+  checked: boolean;
+  setSelected: Dispatch<SetStateAction<boolean>>;
 };
 
-const GenOption = ({optionId, label}: Props): JSX.Element => {
+const GenOption = ({optionId, label, setSelected, checked}: Props): JSX.Element => {
     return (
         <span>
-            <input type={"checkbox"} id={optionId}/>
-            <label htmlFor={optionId}>
-                {label}
-            </label>
+            <input
+                type={"checkbox"}
+                id={optionId}
+                checked={checked}
+                onChange={(e)=>setSelected(e.target.checked)}
+            />
+            <label htmlFor={optionId}>{label}</label>
         </span>
     );
 };

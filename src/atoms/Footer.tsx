@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {ReactComponent as CacheWorksLogo} from './cacheworks.svg';
 
 declare global {
     interface Window {
@@ -20,21 +19,21 @@ const FooterContainer = styled.div`
         color: white;
         text-decoration: none;
       }
-    `;
+`;
 
 const Footer = (): JSX.Element => {
     return (
         <FooterContainer>
             <div>
-                <a href="https://www.github.com/MrZealot/ergogen" target="_blank" rel="noreferrer">
+                <a href="https://www.github.com/ergogen/ergogen" target="_blank" rel="noreferrer">
                     Ergogen by MrZealot
                 </a>
             </div>
             <div>
-                <CacheWorksLogo />
+                v{window.ergogen.version}
             </div>
             <div>
-                v{window.ergogen.version}
+                Powering the <a href="https://zealot.hu/absolem" target="_blank" rel="noreferrer">Absolem</a>
             </div>
         </FooterContainer>
     );
