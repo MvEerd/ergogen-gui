@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0c9cf88.chunk.css",
-    "main.js": "/static/js/main.27978eb8.chunk.js",
-    "main.js.map": "/static/js/main.27978eb8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e7825948.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e7825948.js.map",
-    "static/js/2.c8d695b1.chunk.js": "/static/js/2.c8d695b1.chunk.js",
-    "static/js/2.c8d695b1.chunk.js.map": "/static/js/2.c8d695b1.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.a0c9cf88.chunk.css.map": "/static/css/main.a0c9cf88.chunk.css.map",
-    "static/js/2.c8d695b1.chunk.js.LICENSE.txt": "/static/js/2.c8d695b1.chunk.js.LICENSE.txt",
-    "static/media/cacheworks.f36b31a4.svg": "/static/media/cacheworks.f36b31a4.svg"
+    "main.css": "/ergogen-gui/static/css/main.a0c9cf88.chunk.css",
+    "main.js": "/ergogen-gui/static/js/main.b7687ffc.chunk.js",
+    "main.js.map": "/ergogen-gui/static/js/main.b7687ffc.chunk.js.map",
+    "runtime-main.js": "/ergogen-gui/static/js/runtime-main.ab5a80c6.js",
+    "runtime-main.js.map": "/ergogen-gui/static/js/runtime-main.ab5a80c6.js.map",
+    "static/js/2.bfb8923f.chunk.js": "/ergogen-gui/static/js/2.bfb8923f.chunk.js",
+    "static/js/2.bfb8923f.chunk.js.map": "/ergogen-gui/static/js/2.bfb8923f.chunk.js.map",
+    "index.html": "/ergogen-gui/index.html",
+    "static/css/main.a0c9cf88.chunk.css.map": "/ergogen-gui/static/css/main.a0c9cf88.chunk.css.map",
+    "static/js/2.bfb8923f.chunk.js.LICENSE.txt": "/ergogen-gui/static/js/2.bfb8923f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e7825948.js",
-    "static/js/2.c8d695b1.chunk.js",
+    "static/js/runtime-main.ab5a80c6.js",
+    "static/js/2.bfb8923f.chunk.js",
     "static/css/main.a0c9cf88.chunk.css",
-    "static/js/main.27978eb8.chunk.js"
+    "static/js/main.b7687ffc.chunk.js"
   ]
 }
