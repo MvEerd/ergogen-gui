@@ -12,7 +12,6 @@ import ConfigContextProvider from "./context/ConfigContext";
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1em;
   color: #FFFFFF;
   height: 100%;
   width: 100%;

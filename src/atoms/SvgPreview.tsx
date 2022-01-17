@@ -19,7 +19,7 @@ const InvertedImage = styled.img`
 
 const StyledPanZoom = styled(PanZoom)`
   overflow: hidden;
-  border: 1px solid #a8a8a8;
+  height: 100%;
 
   &:focus-visible {
     outline: none;
@@ -27,7 +27,7 @@ const StyledPanZoom = styled(PanZoom)`
 `;
 
 const SvgPreview = ({svg, width, height}: Props): JSX.Element => (
-    <StyledPanZoom enableBoundingBox={true}>
+    <StyledPanZoom enableBoundingBox={true} autoCenter={true}>
         <InvertedImage
             width={width || '100%'}
             height={height || '100%'}

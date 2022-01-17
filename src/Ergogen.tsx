@@ -1,5 +1,6 @@
 import {useState} from "react";
 import styled from "styled-components";
+import Split from "react-split";
 
 import ConfigEditor from "./molecules/ConfigEditor";
 import Downloads from "./molecules/Dowloads";
@@ -15,34 +16,15 @@ const EditorContainer = styled.div`
   height: 80%;
   display: flex;
   flex-direction: column;
-  max-width: 33em;
   width: 100%;
   flex-grow: 1;
-
-  @media screen and (max-width: 1000px) {
-    max-width: unset;
-  }
 `;
 
 
 const FlexContainer = styled.div`
   display: flex;
   flex-flow: wrap;
-
-  @media screen and (max-width: 1000px) {
-    flex-direction: column;
-  }
 `;
-
-const FlexColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  flex-grow: 1;
-  flex-basis: 25em;
-  padding: 1em;
-`;
-
 
 const Error = styled.div`
   background: #ff6d6d;
@@ -54,13 +36,10 @@ const Error = styled.div`
 `;
 
 const StyledFilePreview = styled(FilePreview)`
-  flex-grow: 1;
+  height: 100%;
 `;
 
 const StyledConfigEditor = styled(ConfigEditor)`
-  border: 3px solid grey;
-  border-radius: 0.3em;
-  height: 80%;
   position: relative;
 `;
 
@@ -69,6 +48,36 @@ const OptionContainer = styled.div`
   justify-content: space-between;
 `;
 
+const StyledSplit = styled(Split)`
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+
+  .gutter {
+    background-color: #878787;
+    border-radius: 0.25rem;
+
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    &:hover {
+      background-color: #a0a0a0;
+    }
+
+    &.gutter-horizontal {
+      cursor: col-resize;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    }
+  }
+`;
+
+const LeftSplitPane = styled.div`
+  padding-right: 1rem;
+`;
+
+const RightSplitPane = styled.div`
+  padding-left: 1rem;
+`;
 
 const Ergogen = () => {
     const [previewKey, setPreviewKey] = useState("demo.svg");
@@ -94,12 +103,27 @@ const Ergogen = () => {
     previewKey.split(".").forEach((key) => previewContent = previewContent?.[key]);
 
     return (
-        <div>
-            <FlexContainer>
+        <FlexContainer>
+            <StyledSplit
+                direction={"horizontal"}
+                sizes={[50, 50]}
+                minSize={100}
+                gutterSize={10}
+                snapOffset={0}
+            >
+                <LeftSplitPane>
                     <EditorContainer>
-                        <Select onChange={()=>{}} onInputChange={()=>{}} value={''} inputValue={''}  onMenuClose={()=>{}} onMenuOpen={()=>{}}/>
-                        <StyledConfigEditor />
-                        <Button onClick={()=>processInput(configInput, { pointsonly: false })}>Generate</Button>
+                        <Select
+                            onChange={() => {}}
+                            onInputChange={() => {}}
+                            value={''}
+                            inputValue={''}
+                            onMenuClose={() => {}}
+                            onMenuOpen={() => {}}
+                            placeholder={"Paste your config below, or select an example here!"}
+                        />
+                        <StyledConfigEditor/>
+                        <Button onClick={() => processInput(configInput, {pointsonly: false})}>Generate</Button>
                         <OptionContainer>
                             <GenOption optionId={'autogen'} label={'Auto-generate'} setSelected={setAutoGen} checked={autoGen}/>
                             <GenOption optionId={'debug'} label={'Debug'} setSelected={setDebug} checked={debug}/>
@@ -107,15 +131,16 @@ const Ergogen = () => {
                         </OptionContainer>
                         {error && <Error>{error.toString()}</Error>}
                     </EditorContainer>
+                </LeftSplitPane>
 
-                    <FlexColumn>
-                        <Downloads setPreview={setPreviewKey}/>
-                        {previewKey && typeof previewContent === 'string' &&
-                            <StyledFilePreview previewKey={previewKey} previewContent={previewContent}/>
-                        }
-                    </FlexColumn>
-            </FlexContainer>
-        </div>
+                <RightSplitPane>
+                    {/*<Downloads setPreview={setPreviewKey}/>*/}
+                    {previewKey && typeof previewContent === 'string' &&
+                      <StyledFilePreview previewKey={previewKey} previewContent={previewContent}/>
+                    }
+                </RightSplitPane>
+            </StyledSplit>
+        </FlexContainer>
     );
 }
 
