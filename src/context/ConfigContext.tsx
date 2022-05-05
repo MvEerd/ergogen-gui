@@ -41,7 +41,7 @@ const ConfigContextProvider = ({initialInput, children}: Props) => {
     const [autoGen3D, setAutoGen3D] = useState<boolean>(false);
 
 
-    const parseConfig = (inputString: string) => {
+    const parseConfig = (inputString: string): [string, { [key: string]: any[] }] => {
         let type = 'UNKNOWN';
         let parsedConfig = null;
 

@@ -6,7 +6,8 @@ const HeaderContainer = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-    `;
+      padding: 0 1rem 0 1rem;
+`;
 
 const LinkContainer = styled.div`
       a {
@@ -15,28 +16,25 @@ const LinkContainer = styled.div`
         display: inline-block;
         margin-right: 2em
       }
+      a:last-of-type{
+        margin-right: 0;
+      }
     `;
 
-const H2Gradient = styled.h2`
-  display: inline;
-  background: #99d4d9;
-  background: linear-gradient(to right, #99d4d9 0%, #b9dbaf 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`
+
 
 const Header = (): JSX.Element => {
     return (
         <HeaderContainer>
             <div>
-                <H2Gradient>Ergogen</H2Gradient>
+                <h2>Ergogen</h2>
             </div>
 
             <LinkContainer>
-                <a href="#" rel="noreferrer">
-                    {/*TODO fix*/}
-                    Intro
-                </a>
+                {/*<a href="#" rel="noreferrer">*/}
+                {/* TODO add intro modal */}
+                {/*    Intro*/}
+                {/*</a>*/}
                 <a href="https://docs.ergogen.xyz/" target="_blank" rel="noreferrer">
                     Docs
                 </a>

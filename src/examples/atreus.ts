@@ -1,5 +1,4 @@
 const Atreus: string = `points:
-points:
   zones:
     matrix:
       columns:

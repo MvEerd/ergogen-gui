@@ -1,5 +1,5 @@
 /*!
- * Ergogen v3.1.0
+ * Ergogen v3.1.2
  * https://zealot.hu/ergogen
  */
 
@@ -484,6 +484,13 @@
     });
 
     prepare$1.parameterize = config => traverse(config, config, [], (target, key, val, root, breadcrumbs) => {
+
+        // we only care about objects
+        if (a$6.type(val)() !== 'object') {
+            target[key] = val;
+            return 
+        }
+
         let params = val.$params;
         let args = val.$args;
 
@@ -512,7 +519,7 @@
         let str = JSON.stringify(val);
         const zip = rows => rows[0].map((_, i) => rows.map(row => row[i]));
         for (const [par, arg] of zip([params, args])) {
-            str = str.replace(new RegExp(`"${par}"`, 'g'), JSON.stringify(arg));
+            str = str.replace(new RegExp(`${par}`, 'g'), arg);
         }
         try {
             val = JSON.parse(str);
@@ -2915,7 +2922,7 @@
     };
 
     var name = "ergogen";
-    var version$1 = "3.1.0";
+    var version$1 = "3.1.2";
     var description = "Ergonomic keyboard layout generator";
     var author = "Bán Dénes <mr@zealot.hu>";
     var license = "MIT";
@@ -3000,6 +3007,7 @@
         logger('Preprocessing input...');
         config = prepare.unnest(config);
         config = prepare.inherit(config);
+        config = prepare.parameterize(config);
         const results = {};
         if (debug) {
             results.raw = raw;
