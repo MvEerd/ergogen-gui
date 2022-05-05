@@ -31,10 +31,10 @@ const Header = (): JSX.Element => {
             </div>
 
             <LinkContainer>
-                <a href="#" rel="noreferrer">
-                    {/*TODO fix*/}
-                    Intro
-                </a>
+                {/*<a href="#" rel="noreferrer">*/}
+                {/* TODO add intro modal */}
+                {/*    Intro*/}
+                {/*</a>*/}
                 <a href="https://docs.ergogen.xyz/" target="_blank" rel="noreferrer">
                     Docs
                 </a>
