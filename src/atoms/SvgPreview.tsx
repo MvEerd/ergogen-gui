@@ -27,7 +27,7 @@ const StyledPanZoom = styled(PanZoom)`
 `;
 
 const SvgPreview = ({svg, width, height}: Props): JSX.Element => (
-    <StyledPanZoom enableBoundingBox={true} autoCenter={true}>
+    <StyledPanZoom enableBoundingBox={true} minZoom={0.8} maxZoom={5}>
         <InvertedImage
             width={width || '100%'}
             height={height || '100%'}

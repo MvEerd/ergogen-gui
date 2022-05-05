@@ -31,7 +31,7 @@ const Tab = styled.div`
     justify-content: center;
     align-content: center;
     cursor: pointer;
-    ${(props: TabProps)=> props?.active ? `border-bottom: 0.2rem solid #28a745` : ``}
+    ${(props: TabProps) => props?.active ? `border-bottom: 0.2rem solid #28a745` : ``}
 `;
 
 type ContextProps = {
@@ -52,10 +52,10 @@ const Tabs = ({tabs}: TabsProps) => {
         }}>
             <TabContainer>
                 {tabs?.map((tab, i) =>
-                    <Tab key={i} onClick={()=>setTabIndex(i)} active={tabIndex === i}>{tab.label}</Tab>
+                    <Tab key={i} onClick={() => setTabIndex(i)} active={tabIndex === i}>{tab.label}</Tab>
                 )}
             </TabContainer>
-            <TabPane content={activeTab.content} />
+            <TabPane content={activeTab.content}/>
         </TabContext.Provider>
     );
 }

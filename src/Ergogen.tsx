@@ -77,11 +77,13 @@ const StyledSplit = styled(Split)`
 `;
 
 const LeftSplitPane = styled.div`
-  padding-right: 1rem;
+    padding-right: 1rem;
+    position: relative;
 `;
 
 const RightSplitPane = styled.div`
-  padding-left: 1rem;
+    padding-left: 1rem;
+    position: relative;
 `;
 
 const Ergogen = () => {
@@ -120,7 +122,7 @@ const Ergogen = () => {
                     <EditorContainer>
                         <StyledSelect
                             options={exampleOptions}
-                            value={null}
+                            value={selectedOption}
                             // @ts-ignore
                             onChange={(newValue: ConfigOption|null) => setSelectedOption(newValue)}
                             placeholder={"Paste your config below, or select an example here!"}
@@ -138,7 +140,7 @@ const Ergogen = () => {
 
                 <RightSplitPane>
                     <Tabs tabs={[
-                        {label: 'Preview', content: <StyledFilePreview previewKey={previewKey} previewContent={previewContent}/>},
+                        {label: 'Preview', content: <StyledFilePreview key={previewKey} previewKey={previewKey} previewContent={previewContent}/>},
                         {label: 'Downloads', content: <Downloads setPreview={setPreviewKey}/>},
                     ]} />
                 </RightSplitPane>

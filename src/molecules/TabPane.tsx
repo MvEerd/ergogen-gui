@@ -1,15 +1,21 @@
 import React from "react";
+import styled from "styled-components";
 
 type TabPaneProps = {
     content: React.ReactComponentElement<any>,
     className?: string
 };
 
+const Pane = styled.div`
+    position: relative;
+    height: 100%;
+`
+
 const TabPane = ({content, className}: TabPaneProps) => {
     return (
-        <div className={className}>
+        <Pane className={className}>
             {content}
-        </div>
+        </Pane>
     );
 }
 
