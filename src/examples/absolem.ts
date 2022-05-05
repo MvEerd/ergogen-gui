@@ -1,4 +1,9 @@
-const Absolem: string = `points:
+import {ConfigExample} from "./index";
+
+const Absolem: ConfigExample = {
+    label: "Absolem (simplified)",
+    author: "MrZealot",
+    value: `points:
   zones:
     matrix:
       anchor:
@@ -38,6 +43,7 @@ const Absolem: string = `points:
   rotate: -20
   mirror:
     ref: matrix_pinky_home
-    distance: 223.7529778`;
+    distance: 223.7529778`
+};
 
 export default Absolem;

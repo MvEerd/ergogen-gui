@@ -1,4 +1,9 @@
-const ADux: string = `points:
+import {ConfigExample} from "./index";
+
+const ADux: ConfigExample = {
+    label: "A. dux",
+    author: "tapioki",
+    value: `points:
   zones:
     matrix:
       columns:
@@ -197,7 +202,7 @@ pcbs:
         params:
           reverse: true
           symmetric: true
-
-`;
+`
+};
 
 export default ADux;

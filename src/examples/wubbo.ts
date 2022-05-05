@@ -1,5 +1,9 @@
-const Wubbo: string = `
-units:
+import {ConfigExample} from "./index";
+
+const Wubbo: ConfigExample = {
+    label: "Wubbo (outlines, switchplate)",
+    author: "cache.works",
+    value: `units:
   # Parameters
   row_spacing: 1cy
 
@@ -205,6 +209,7 @@ cases:
     - type: outline
       name: combined
       extrude: choc_plate_thickness
-`;
+`
+};
 
 export default Wubbo;
