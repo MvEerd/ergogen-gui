@@ -13,19 +13,23 @@ const Button = styled.button`
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
-  background-image: linear-gradient(320deg, #70c3d7 0%, #42aca2 100%);
+  background-color: #28a745;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,
+  background-color .15s ease-in-out,
+  border-color .15s ease-in-out,
+  box-shadow .15s ease-in-out;
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1.2rem;
   cursor: pointer;
   text-align: center;
-  transition: all 50ms ease-in-out,
-  transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 
   &:hover {
-    background-image: linear-gradient(320deg, #66b1c6 0%, #3ba096 100%);
+    background-color: #218838;
+    border-color: #1e7e34;
   }
 
   &:active {
