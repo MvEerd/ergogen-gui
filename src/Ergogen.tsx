@@ -11,7 +11,7 @@ import Button from "./atoms/Button";
 import Select from "react-select";
 import GenOption from "./atoms/GenOption";
 import Tabs from "./organisms/Tabs";
-import Examples, {ConfigOption, exampleOptions} from "./examples";
+import {ConfigOption, exampleOptions} from "./examples";
 
 const EditorContainer = styled.div`
   position: relative;
@@ -51,6 +51,7 @@ const OptionContainer = styled.div`
 
 const StyledSelect = styled(Select)`
     color: black;
+    white-space: nowrap;
 `;
 
 const StyledSplit = styled(Split)`

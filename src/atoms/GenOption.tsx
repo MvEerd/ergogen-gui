@@ -1,4 +1,5 @@
 import React, {Dispatch, SetStateAction} from "react";
+import styled from "styled-components";
 
 type Props = {
   optionId: string;
@@ -7,9 +8,15 @@ type Props = {
   setSelected: Dispatch<SetStateAction<boolean>>;
 };
 
+const OptionContainer = styled.span`
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+`;
+
 const GenOption = ({optionId, label, setSelected, checked}: Props): JSX.Element => {
     return (
-        <span>
+        <OptionContainer>
             <input
                 type={"checkbox"}
                 id={optionId}
@@ -17,7 +24,7 @@ const GenOption = ({optionId, label, setSelected, checked}: Props): JSX.Element 
                 onChange={(e)=>setSelected(e.target.checked)}
             />
             <label htmlFor={optionId}>{label}</label>
-        </span>
+        </OptionContainer>
     );
 };
 

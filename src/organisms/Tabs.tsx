@@ -20,7 +20,9 @@ const TabContainer = styled.div`
     align-content: space-between;
     justify-content: space-around;
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
 `;
 
 const Tab = styled.div`
@@ -31,7 +33,16 @@ const Tab = styled.div`
     justify-content: center;
     align-content: center;
     cursor: pointer;
-    ${(props: TabProps) => props?.active ? `border-bottom: 0.2rem solid #28a745` : ``}
+    transition: background-color 150ms ease-in-out;
+
+    ${(props: TabProps) => props?.active ? `border-bottom: 0.2rem solid #28a745;` : ``}
+    &:hover {
+        background: #525252;
+    }
+
+    &:active {
+        background: #595959;
+    }
 `;
 
 type ContextProps = {
