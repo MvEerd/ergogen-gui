@@ -1,4 +1,4 @@
-const Atreus: string = `
+const Wubbo: string = `
 units:
   # Parameters
   row_spacing: 1cy
@@ -231,4 +231,4 @@ cases:
       extrude: choc_plate_thickness
 `;
 
-export default Atreus;
+export default Wubbo;

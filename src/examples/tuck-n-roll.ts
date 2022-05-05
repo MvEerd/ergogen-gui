@@ -1,5 +1,4 @@
-const TuckNRoll: string = `
-points:
+const TuckNRoll: string = `points:
   rotate: 0
   zones:
     matrix:

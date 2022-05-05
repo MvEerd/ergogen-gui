@@ -1,12 +1,14 @@
 import Button from "./Button";
 import styled from "styled-components";
+import {Dispatch, SetStateAction} from "react";
 
 type Props = {
     fileName: string,
     extension: string,
     content: string,
     preview?: string,
-    setPreview: (preview: string) => void
+    setPreview: (preview: string) => void,
+    setTabIndex: Dispatch<SetStateAction<number>> | undefined
 };
 
 const Row = styled.div`
@@ -19,19 +21,27 @@ const FileName = styled.div`
 `;
 
 const Buttons = styled.div`
-    
 `;
 
 const StyledButton = styled(Button)`
 margin-right: 0.5em;
 `;
 
-const DownloadRow = ({fileName, extension, content, preview, setPreview}: Props): JSX.Element => {
+const DownloadRow = ({fileName, extension, content, preview, setPreview, setTabIndex}: Props): JSX.Element => {
     return (
         <Row>
             <FileName>{fileName}.{extension}</FileName>
             <Buttons>
-                {preview && <StyledButton size={"small"} onClick={()=>setPreview(preview)}>Preview</StyledButton>}
+                {preview && (
+                    <StyledButton size={"small"}
+                        onClick={()=>{
+                            setPreview(preview);
+                            setTabIndex?.(0)
+                        }}
+                    >
+                        Preview
+                    </StyledButton>
+                )}
                 <a target={"_blank"}
                    rel={"noreferrer"}
                    download={`${fileName}.${extension}`}

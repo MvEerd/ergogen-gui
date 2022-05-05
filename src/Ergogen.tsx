@@ -49,6 +49,10 @@ const OptionContainer = styled.div`
   justify-content: space-between;
 `;
 
+const StyledSelect = styled(Select)`
+    color: black;
+`;
+
 const StyledSplit = styled(Split)`
   width: 100%;
   display: flex;
@@ -86,7 +90,9 @@ const Ergogen = () => {
     const configContext = useConfigContext();
 
     useEffect(()=>{
-        configContext?.setConfigInput(selectedOption?.value ?? '')
+        if(selectedOption?.value) {
+            configContext?.setConfigInput(selectedOption.value)
+        }
     }, [selectedOption]);
 
     if (!configContext) return null;
@@ -101,7 +107,6 @@ const Ergogen = () => {
         return { value: value.configContent, label: value.label }
     });
 
-
     return (
         <FlexContainer>
             <StyledSplit
@@ -113,10 +118,11 @@ const Ergogen = () => {
             >
                 <LeftSplitPane>
                     <EditorContainer>
-                        <Select
+                        <StyledSelect
                             options={exampleOptions}
-                            value={selectedOption ?? exampleOptions[0]}
-                            onChange={(x) => setSelectedOption(x)}
+                            value={null}
+                            // @ts-ignore
+                            onChange={(newValue: ConfigOption|null) => setSelectedOption(newValue)}
                             placeholder={"Paste your config below, or select an example here!"}
                         />
                         <StyledConfigEditor/>

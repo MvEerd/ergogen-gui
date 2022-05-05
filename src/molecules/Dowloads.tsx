@@ -2,7 +2,8 @@ import DownloadRow from "../atoms/DownloadRow";
 import yaml from 'js-yaml';
 import styled from "styled-components";
 import {useConfigContext} from "../context/ConfigContext";
-import {Dispatch, SetStateAction} from "react";
+import {Dispatch, SetStateAction, useContext} from "react";
+import {TabContext} from "../organisms/Tabs";
 
 const DownloadsContainer = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ type DownloadArr = Array<DownloadObj>;
 const Downloads = ({setPreview}: Props) => {
     let downloads: DownloadArr = [];
     const configContext = useConfigContext();
+    const tabContext = useContext(TabContext);
     if(!configContext) return null;
 
     const {configInput, results} = configContext;
@@ -112,7 +114,7 @@ const Downloads = ({setPreview}: Props) => {
                   (download, i) => {
                       if (download.fileName.startsWith("_")) return false;
 
-                      return <DownloadRow key={i} {...download} setPreview={setPreview}/>;
+                      return <DownloadRow key={i} {...download} setPreview={setPreview} setTabIndex={tabContext?.setTabIndex}/>;
                   }
               )
           }
