@@ -10,6 +10,7 @@ import {useConfigContext} from "./context/ConfigContext";
 import Button from "./atoms/Button";
 import Select from "react-select/base";
 import GenOption from "./atoms/GenOption";
+import Tabs from "./organisms/Tabs";
 
 const EditorContainer = styled.div`
   position: relative;
@@ -98,9 +99,11 @@ const Ergogen = () => {
         setDebug
     } = configContext;
 
-    let previewContent = results;
+    let walkArray = results;
     // Walk through the JSON keys until we get the content of the desired previewKey
-    previewKey.split(".").forEach((key) => previewContent = previewContent?.[key]);
+    previewKey.split(".").forEach((key) => walkArray = walkArray?.[key]);
+
+    let previewContent = typeof walkArray === 'string' ? walkArray : "";
 
     return (
         <FlexContainer>
@@ -134,10 +137,10 @@ const Ergogen = () => {
                 </LeftSplitPane>
 
                 <RightSplitPane>
-                    {/*<Downloads setPreview={setPreviewKey}/>*/}
-                    {previewKey && typeof previewContent === 'string' &&
-                      <StyledFilePreview previewKey={previewKey} previewContent={previewContent}/>
-                    }
+                    <Tabs tabs={[
+                        {label: 'Preview', content: <StyledFilePreview previewKey={previewKey} previewContent={previewContent}/>},
+                        {label: 'Downloads', content: <Downloads setPreview={setPreviewKey}/>},
+                    ]} />
                 </RightSplitPane>
             </StyledSplit>
         </FlexContainer>
