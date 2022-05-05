@@ -69,17 +69,6 @@ points:
         params:
           keycaps: true
           reverse: false
-      # A trace to connect each hotswap socket with a pin hole (do a 4mm fillet on these in KiCad)
-      trace:
-        type: trace
-        params:
-          side: B
-          points: [
-            [0, 6],
-            [6, 6],
-            [9, 4],
-            [9, -4]
-          ]
   zones:
     alphas:
       rows:
@@ -100,20 +89,7 @@ points:
           rows:
             bottom.key_net: P104
             home.key_net: P102
-            top:
-              key_net: test
-              footprints:
-                choc: $unset
-                trace: $unset
-                choc_hotswap: $unset
-                encoder:
-                  type: rotary
-                  nets:
-                    from: =key_net
-                    to: GND
-                    A: TODO3
-                    B: TODO4
-                    C: GND
+            top.skip: true
         ring:
           rotate: ring_rotation - pinky_rotation
           stagger: ring_stagger
