@@ -1,4 +1,4 @@
-const Atreus: string = `points:
+const Atreus: string = `
 points:
   zones:
     matrix:

@@ -6,7 +6,6 @@ import './index.css';
 import Ergogen from './Ergogen';
 import Header from "./atoms/Header";
 import Footer from "./atoms/Footer";
-import {Absolem} from "./examples";
 import ConfigContextProvider from "./context/ConfigContext";
 
 const AppContainer = styled.div`
@@ -22,7 +21,7 @@ ReactDOM.render(
       <>
           <AppContainer>
               <Header/>
-              <ConfigContextProvider initialInput={Absolem}>
+              <ConfigContextProvider initialInput={""}>
                 <Ergogen />
               </ConfigContextProvider>
               <Footer/>

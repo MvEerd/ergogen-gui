@@ -41,7 +41,9 @@ const Tabs = ({tabs}: TabsProps) => {
     return (
         <>
             <TabContainer>
-                {tabs?.map((tab, i) => <Tab onClick={()=>setTabIndex(i)} active={tabIndex === i}>{tab.label}</Tab>)}
+                {tabs?.map((tab, i) =>
+                    <Tab key={i} onClick={()=>setTabIndex(i)} active={tabIndex === i}>{tab.label}</Tab>
+                )}
             </TabContainer>
             <TabPane content={activeTab.content} />
         </>

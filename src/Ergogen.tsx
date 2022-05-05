@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import styled from "styled-components";
 import Split from "react-split";
 
@@ -8,9 +8,10 @@ import FilePreview from "./molecules/FilePreview";
 
 import {useConfigContext} from "./context/ConfigContext";
 import Button from "./atoms/Button";
-import Select from "react-select/base";
+import Select from "react-select";
 import GenOption from "./atoms/GenOption";
 import Tabs from "./organisms/Tabs";
+import Examples, {ConfigOption} from "./examples";
 
 const EditorContainer = styled.div`
   position: relative;
@@ -20,7 +21,6 @@ const EditorContainer = styled.div`
   width: 100%;
   flex-grow: 1;
 `;
-
 
 const FlexContainer = styled.div`
   display: flex;
@@ -82,28 +82,25 @@ const RightSplitPane = styled.div`
 
 const Ergogen = () => {
     const [previewKey, setPreviewKey] = useState("demo.svg");
-
+    const [selectedOption, setSelectedOption] = useState<ConfigOption|null>(null);
     const configContext = useConfigContext();
+
+    useEffect(()=>{
+        configContext?.setConfigInput(selectedOption?.value ?? '')
+    }, [selectedOption]);
+
     if (!configContext) return null;
 
-    const {
-        results,
-        error,
-        processInput,
-        configInput,
-        autoGen,
-        setAutoGen,
-        autoGen3D,
-        setAutoGen3D,
-        debug,
-        setDebug
-    } = configContext;
 
-    let walkArray = results;
+    let walkArray = configContext?.results;
     // Walk through the JSON keys until we get the content of the desired previewKey
     previewKey.split(".").forEach((key) => walkArray = walkArray?.[key]);
 
     let previewContent = typeof walkArray === 'string' ? walkArray : "";
+    const exampleOptions: readonly ConfigOption[] = Object.entries(Examples)?.map(([key, value]) => {
+        return { value: value.configContent, label: value.label }
+    });
+
 
     return (
         <FlexContainer>
@@ -117,22 +114,19 @@ const Ergogen = () => {
                 <LeftSplitPane>
                     <EditorContainer>
                         <Select
-                            onChange={() => {}}
-                            onInputChange={() => {}}
-                            value={''}
-                            inputValue={''}
-                            onMenuClose={() => {}}
-                            onMenuOpen={() => {}}
+                            options={exampleOptions}
+                            value={selectedOption ?? exampleOptions[0]}
+                            onChange={(x) => setSelectedOption(x)}
                             placeholder={"Paste your config below, or select an example here!"}
                         />
                         <StyledConfigEditor/>
-                        <Button onClick={() => processInput(configInput, {pointsonly: false})}>Generate</Button>
+                        <Button onClick={() => configContext?.processInput(configContext?.configInput, {pointsonly: false})}>Generate</Button>
                         <OptionContainer>
-                            <GenOption optionId={'autogen'} label={'Auto-generate'} setSelected={setAutoGen} checked={autoGen}/>
-                            <GenOption optionId={'debug'} label={'Debug'} setSelected={setDebug} checked={debug}/>
-                            <GenOption optionId={'autogen3d'} label={<>Auto-gen 3D <small>(slow)</small></>} setSelected={setAutoGen3D} checked={autoGen3D}/>
+                            <GenOption optionId={'autogen'} label={'Auto-generate'} setSelected={configContext?.setAutoGen} checked={configContext?.autoGen}/>
+                            <GenOption optionId={'debug'} label={'Debug'} setSelected={configContext?.setDebug} checked={configContext?.debug}/>
+                            <GenOption optionId={'autogen3d'} label={<>Auto-gen 3D <small>(slow)</small></>} setSelected={configContext?.setAutoGen3D} checked={configContext?.autoGen3D}/>
                         </OptionContainer>
-                        {error && <Error>{error.toString()}</Error>}
+                        {configContext?.error && <Error>{configContext?.error?.toString()}</Error>}
                     </EditorContainer>
                 </LeftSplitPane>
 
