@@ -2,6 +2,7 @@ import React, {createContext, Dispatch, SetStateAction, useCallback, useContext,
 import { DebouncedFunc } from "lodash-es";
 import yaml from "js-yaml";
 import debounce from "lodash.debounce";
+import { useLocalStorage } from 'react-use';
 
 type Props = {
     initialInput: string,
@@ -11,9 +12,9 @@ type Props = {
 type Results = { [key: string]: any|Results };
 
 type ContextProps = {
-    configInput: string,
-    setConfigInput: Dispatch<SetStateAction<string>>,
-    processInput: DebouncedFunc<(textInput: string, options?: ProcessOptions) => Promise<void>>,
+    configInput: string | undefined,
+    setConfigInput: Dispatch<SetStateAction<string | undefined>>,
+    processInput: DebouncedFunc<(textInput: string | undefined, options?: ProcessOptions) => Promise<void>>,
     error: string | null,
     results: Results | null,
     debug: boolean,
@@ -29,9 +30,10 @@ type ProcessOptions = {
 };
 
 export const ConfigContext = createContext<ContextProps | null>(null);
+export const CONFIG_LOCAL_STORAGE_KEY = 'LOCAL_STORAGE_CONFIG'
 
 const ConfigContextProvider = ({initialInput, children}: Props) => {
-    const [configInput, setConfigInput] = useState<string>(initialInput);
+    const [configInput, setConfigInput] = useLocalStorage<string>(CONFIG_LOCAL_STORAGE_KEY, initialInput);
     const [error, setError] = useState<string|null>(null);
     const [results, setResults] = useState<Results|null>(null);
     const [debug, setDebug] = useState<boolean>(true);
@@ -62,10 +64,10 @@ const ConfigContextProvider = ({initialInput, children}: Props) => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const processInput = useCallback(
-        debounce(async (textInput: string, options: ProcessOptions = { pointsonly: true }) => {
+        debounce(async (textInput: string | undefined, options: ProcessOptions = { pointsonly: true }) => {
             let results = null;
-            let inputConfig: string|{} = textInput;
-            const [,parsedConfig] = parseConfig(textInput);
+            let inputConfig: string | {} = textInput ?? '';
+            const [,parsedConfig] = parseConfig(textInput ?? '');
 
             setError(null);
 

@@ -34,7 +34,7 @@ const Downloads = ({setPreview}: Props) => {
         downloads.push({
                 fileName: 'raw',
                 extension: 'txt',
-                content: configInput
+                content: configInput ?? ''
             }, {
                 fileName: 'canonical',
                 extension: 'yaml',
