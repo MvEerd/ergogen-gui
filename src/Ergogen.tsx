@@ -11,7 +11,7 @@ import Button from "./atoms/Button";
 import Select from "react-select";
 import GenOption from "./atoms/GenOption";
 import Tabs from "./organisms/Tabs";
-import Examples, {ConfigOption} from "./examples";
+import Examples, {ConfigOption, exampleOptions} from "./examples";
 
 const EditorContainer = styled.div`
   position: relative;
@@ -105,9 +105,6 @@ const Ergogen = () => {
     previewKey.split(".").forEach((key) => walkArray = walkArray?.[key]);
 
     let previewContent = typeof walkArray === 'string' ? walkArray : "";
-    const exampleOptions: readonly ConfigOption[] = Object.entries(Examples)?.map(([key, value]) => {
-        return { value: value.configContent, label: value.label }
-    });
 
     return (
         <FlexContainer>

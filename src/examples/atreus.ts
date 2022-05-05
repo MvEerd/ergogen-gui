@@ -1,4 +1,9 @@
-const Atreus: string = `points:
+import {ConfigExample} from "./index";
+
+const Atreus: ConfigExample = {
+    label: "Atreus (simplified)",
+    author: "MrZealot",
+    value: `points:
   zones:
     matrix:
       columns:
@@ -23,6 +28,7 @@ const Atreus: string = `points:
   rotate: -10
   mirror:
     ref: matrix_thumb_home
-    distance: 22`;
+    distance: 22`
+};
 
 export default Atreus;
