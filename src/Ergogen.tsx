@@ -62,7 +62,7 @@ const StyledSplit = styled(Split)`
 
   .gutter {
     background-color: #878787;
-    border-radius: 0.25rem;
+    border-radius: 0.15rem;
 
     background-repeat: no-repeat;
     background-position: 50%;
