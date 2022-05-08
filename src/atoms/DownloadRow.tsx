@@ -18,9 +18,12 @@ const Row = styled.div`
 `;
 
 const FileName = styled.div`
+    overflow: hidden;
+    text-overflow: ellipsis;
 `;
 
 const Buttons = styled.div`
+    white-space: nowrap;
 `;
 
 const StyledButton = styled(Button)`
