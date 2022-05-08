@@ -56,6 +56,7 @@ const StyledSelect = styled(Select)`
 
 const StyledSplit = styled(Split)`
   width: 100%;
+  height: 100%;
   display: flex;
   padding: 1rem;
 
@@ -111,7 +112,7 @@ const Ergogen = () => {
         <FlexContainer>
             <StyledSplit
                 direction={"horizontal"}
-                sizes={[50, 50]}
+                sizes={[30, 70]}
                 minSize={100}
                 gutterSize={10}
                 snapOffset={0}
@@ -137,10 +138,20 @@ const Ergogen = () => {
                 </LeftSplitPane>
 
                 <RightSplitPane>
-                    <Tabs tabs={[
-                        {label: 'Preview', content: <StyledFilePreview key={previewKey} previewKey={previewKey} previewContent={previewContent}/>},
-                        {label: 'Downloads', content: <Downloads setPreview={setPreviewKey}/>},
-                    ]} />
+                    <StyledSplit
+                        direction={"horizontal"}
+                        sizes={[70, 30]}
+                        minSize={100}
+                        gutterSize={10}
+                        snapOffset={0}
+                    >
+                        <LeftSplitPane>
+                            <StyledFilePreview key={previewKey} previewKey={previewKey} previewContent={previewContent}/>
+                        </LeftSplitPane>
+                        <RightSplitPane>
+                            <Downloads setPreview={setPreviewKey}/>
+                        </RightSplitPane>
+                    </StyledSplit>
                 </RightSplitPane>
             </StyledSplit>
         </FlexContainer>
