@@ -4941,10 +4941,9 @@ entities@^2.0.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
 
-ergogen@^3.*:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/ergogen/-/ergogen-3.1.2.tgz#7becf77745c8fa9cccb69eea646563179ea25d0d"
-  integrity sha512-qKZX8QUr9J+S9eqUJWAiyuTtYD8yBniuSeiJkLUn4o67sq73ZQj3/3iD6dgAiRsfaQ5MCgzrIhKk2+T8ZgV9nw==
+ergogen@mveerd/ergogen#mveerd:
+  version "9.9.9-mveerd-3.1.0"
+  resolved "https://codeload.github.com/mveerd/ergogen/tar.gz/d9912d60ee585e70cf99623546b4469ef927583b"
   dependencies:
     "@jscad/openjscad" "github:ergogen/oldjscad"
     fs-extra "^10.0.0"
