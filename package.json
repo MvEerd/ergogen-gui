@@ -13,7 +13,7 @@
     "@types/node": "^16.9.4",
     "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.9",
-    "ergogen": "^3.*",
+    "ergogen": "mveerd/ergogen#mveerd",
     "js-yaml": "^4.1.0",
     "lodash.debounce": "^4.0.8",
     "openjscad-react": "^0.0.1-canary-07",
