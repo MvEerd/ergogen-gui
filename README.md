@@ -1,7 +1,7 @@
 ## Ergogen GUI 
 This is a web interface for [Ergogen](https://github.com/mrzealot/ergogen) by @MrZealot.  
 
-### :warning: Note this GUI currently still uses 3.0 and depends on several outdated packages so has not been updated yet.
+### :warning: This repo currently relies on an outdated Webpack 4, moving to Webpack 5 is non-trivial due to outdated dependencies like openjscad which depend on browserify and node polyfills
 
 This adds some additional features like
 - Live preview reloading
