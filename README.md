@@ -1,6 +1,8 @@
 ## Ergogen GUI 
 This is a web interface for [Ergogen](https://github.com/mrzealot/ergogen) by @MrZealot.  
 
+### :warning: Note this GUI currently still uses 3.0 and depends on several outdated packages so has not been updated yet.
+
 This adds some additional features like
 - Live preview reloading
 - VSCode editor (Monaco)
