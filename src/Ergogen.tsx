@@ -10,7 +10,6 @@ import {useConfigContext} from "./context/ConfigContext";
 import Button from "./atoms/Button";
 import Select from "react-select";
 import GenOption from "./atoms/GenOption";
-import Tabs from "./organisms/Tabs";
 import {ConfigOption, exampleOptions} from "./examples";
 
 const EditorContainer = styled.div`
@@ -54,6 +53,7 @@ const StyledSelect = styled(Select)`
     white-space: nowrap;
 `;
 
+// @ts-ignore
 const StyledSplit = styled(Split)`
   width: 100%;
   height: 100%;
