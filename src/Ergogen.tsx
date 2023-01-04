@@ -54,6 +54,7 @@ const StyledSelect = styled(Select)`
     white-space: nowrap;
 `;
 
+// @ts-ignore
 const StyledSplit = styled(Split)`
   width: 100%;
   height: 100%;
