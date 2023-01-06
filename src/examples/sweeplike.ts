@@ -38,7 +38,7 @@ pcbs:
         where: true
         params:
           from: GND
-          to: =name
+          to: "{{name}}"
           reverse: true
           keycaps: true
       mcu:

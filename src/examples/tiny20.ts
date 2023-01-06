@@ -80,7 +80,7 @@ points:
         type: choc
         nets:
           from: GND
-          to: =column_net
+          to: "{{column_net}}"
         params:
           keycaps: true
           reverse: true
@@ -141,7 +141,7 @@ pcbs:
         where: true
         params:
           from: GND
-          to: =column_net
+          to: "{{column_net}}"
           keycaps: true
           reverse: true
           hotswap: false

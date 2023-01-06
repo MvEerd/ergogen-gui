@@ -56,7 +56,7 @@ points:
       choc_hotswap:
         type: choc
         nets:
-          to: =key_net
+          to: "{{key_net}}"
           from: GND
         params:
           reverse: false
@@ -69,7 +69,7 @@ points:
         anchor: 
           rotate: 180
         nets:
-          to: =key_net
+          to: "{{key_net}}"
           from: GND
         params:
           keycaps: true
