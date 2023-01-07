@@ -3,23 +3,25 @@ import {ConfigExample} from "./index";
 const Atreus: ConfigExample = {
     label: "Atreus (simplified)",
     author: "MrZealot",
-    value: `points:
+    value: `
+points:
   zones:
     matrix:
       columns:
         pinky:
         ring:
-          stagger: 3
+          key.stagger: 3
         middle:
-          stagger: 5
+          key.stagger: 5
         index:
-          stagger: -5
+          key.stagger: -5
         inner:
-          stagger: -6
+          key.stagger: -6
         thumb:
-          stagger: 10
-          row_overrides:
-            home:
+          key.skip: true
+          key.stagger: 10
+          rows:
+            home.skip: false
       rows:
         bottom:
         home:
@@ -28,7 +30,8 @@ const Atreus: ConfigExample = {
   rotate: -10
   mirror:
     ref: matrix_thumb_home
-    distance: 22`
+    distance: 22
+`
 };
 
 export default Atreus;
