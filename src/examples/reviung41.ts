@@ -83,7 +83,7 @@ points:
         width: 1.25
         row_net: P16
         column_net: P20
-        mirror.column_net: P15 
+        mirror.column_net: P15
     thumb_tucky:
       mirror: *mirror
       anchor:

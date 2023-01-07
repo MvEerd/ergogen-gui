@@ -66,7 +66,7 @@ points:
           keycaps: false
       choc:
         type: choc
-        anchor: 
+        anchor:
           rotate: 180
         nets:
           to: "{{key_net}}"
