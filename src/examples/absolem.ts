@@ -11,15 +11,15 @@ const Absolem: ConfigExample = {
       columns:
         pinky:
         ring:
-          rotate: -5
-          origin: [-12, -19]
-          stagger: 12
+          key.splay: -5
+          key.origin: [-12, -19]
+          key.stagger: 12
         middle:
-          stagger: 5
+          key.stagger: 5
         index:
-          stagger: -6
+          key.stagger: -6
         inner:
-          stagger: -2
+          key.stagger: -2
       rows:
         bottom:
         home:
@@ -31,13 +31,13 @@ const Absolem: ConfigExample = {
       columns:
         near:
         home:
-          spread: 21.25
-          rotate: -28
-          origin: [-11.75, -9]
+          key.spread: 21.25
+          key.splay: -28
+          key.origin: [-11.75, -9]
         far:
-          spread: 21.25
-          rotate: -28
-          origin: [-9.5, -9]
+          key.spread: 21.25
+          key.splay: -28
+          key.origin: [-9.5, -9]
       rows:
         thumb:
   rotate: -20
