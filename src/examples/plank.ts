@@ -3,7 +3,8 @@ import {ConfigExample} from "./index";
 const Reviung41: ConfigExample = {
     label: "Plank (ortholinear, 2u space)",
     author: "cache.works",
-    value: `units:
+    value: `
+units:
   visual_x: 17.5
   visual_y: 16.5
 points:
@@ -15,33 +16,33 @@ points:
             column_net: P1
             column_mark: 1
         two:
-          spread: 1cx
           key:
+            spread: 1cx
             column_net: P0
             column_mark: 2
         three:
-          spread: 1cx
           key:
+            spread: 1cx
             column_net: P14
             column_mark: 3
         four:
-          spread: 1cx
           key:
+            spread: 1cx
             column_net: P20
             column_mark: 4
         five:
-          spread:  1cx
           key:
+            spread:  1cx
             column_net: P2
             column_mark: 5
         six:
-          spread:  1cx
           key:
+            spread:  1cx
             column_net: P3
             column_mark: 6
         seven:
-          spread:  1cx
           key:
+            spread:  1cx
             column_net: P4
             column_mark: 7
           rows:
@@ -49,29 +50,32 @@ points:
               skip: false
               shift: [-0.5cx, 1cy]
               rotate: 180
+            modrow:
+              shift: [-0.5cx, -1cy]
+              rotate: 180
         eight:
-          spread:  1cx
           key:
+            spread:  1cx
             column_net: P5
             column_mark: 8
         nine:
-          spread:  1cx
           key:
+            spread:  1cx
             column_net: P6
             column_mark: 9
         ten:
-          spread:  1cx
           key:
+            spread:  1cx
             column_net: P7
             column_mark: 10
         eleven:
-          spread:  1cx
           key:
+            spread:  1cx
             column_net: P8
             column_mark: 11
         twelve:
-          spread:  1cx
           key:
+            spread:  1cx
             column_net: P9
             column_mark: 12
       rows:
@@ -93,84 +97,81 @@ points:
           row_net: P21
   key:
     bind: 2
-    footprints:
-      choc:
-        type: choc
-        anchor:
-        nets:
-          from: =colrow
-          to: =column_net
-        params:
-          keycaps: true
-      diode:
-        type: diode
-        anchor:
-          rotate: 0
-          shift: [ 0, -4.5 ]
-        nets:
-          from: =colrow
-          to: =row_net
-        params:
-          via_in_pad: true
-          through_hole: false
 outlines:
-  exports:
-    raw:
-      - type: keys
-        side: left
-        size: [1cx,1cy]
-        corner: 1
-    panel:
-      - type: outline
-        name: raw
-        fillet: 0.5
-    switch_cutouts:
-      - type: keys
-        side: left
-        size: 14
-        bound: false
-    switch_plate:
-      main:
-        type: outline
-        name: panel
-        fillet: 0.5
-      keyholes:
-        type: outline
-        name: switch_cutouts
-        operation: subtract
+  raw:
+    - what: rectangle
+      where: true
+      asym: left
+      size: [1cx,1cy]
+      corner: 1
+  panel:
+    - what: outline
+      name: raw
+      fillet: 0.5
+  switch_cutouts:
+    - what: rectangle
+      where: true
+      asym: left
+      size: 14
+      bound: false
+  switch_plate:
+    main:
+      what: outline
+      name: panel
+      fillet: 0.5
+    keyholes:
+      what: outline
+      name: switch_cutouts
+      operation: subtract
 pcbs:
   plank:
     outlines:
       main:
         outline: panel
     footprints:
+      choc:
+        what: choc
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{column_net}}"
+          keycaps: true
+      diode:
+        what: diode
+        where: true
+        adjust:
+          rotate: 0
+          shift: [ 0, -4.5 ]
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+          # via_in_pad: true
+          # through_hole: false
       promicro:
-        type: promicro
-        anchor:
+        what: promicro
+        where:
           ref: matrix_seven_top
           shift: [-0.5cx, 1]
         params:
           orientation: down
       powerswitch:
-        type: slider
-        anchor:
+        what: slider
+        where:
           ref: matrix_four_top
           shift: [0.5cx, 8.95]
-        nets:
+        params:
           from: RAW
           to: BAT
-        params:
           side: B
       jstph:
-        type: jstph
-        anchor:
+        what: jstph
+        where:
           ref: matrix_four_top
           shift: [0.5cx, -1.5cy]
           rotate: 180
-        nets:
+        params:
           pos: BAT
           neg: GND
-        params:
           side: B
 `
 };

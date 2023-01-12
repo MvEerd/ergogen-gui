@@ -9,10 +9,10 @@ points:
     matrix:
       columns:
         pinky:
-        ring.stagger: 0.66U
-        middle.stagger: 0.25U
-        index.stagger: -0.25U
-        inner.stagger: -0.15U
+        ring.key.stagger: 0.66U
+        middle.key.stagger: 0.25U
+        index.key.stagger: -0.25U
+        inner.key.stagger: -0.15U
       rows:
         bottom.padding: U
         home.padding: U
@@ -26,28 +26,28 @@ points:
         tucky:
           key.name: thumb_tucky
         reachy:
-          spread: U
-          rotate: -15
-          origin: [-0.5U, -0.5U]
+          key.spread: U
+          key.splay: -15
+          key.origin: [-0.5U, -0.5U]
           key.name: thumb_reachy
-  key:
-    footprints:
-      - type: mx
-        nets:
-          from: GND
-          to: =name
-        params:
-          reverse: true
-          keycaps: true
 pcbs:
   simple_split:
     footprints:
-      - type: promicro
-        anchor:
+      keys:
+        what: mx
+        where: true
+        params:
+          from: GND
+          to: "{{name}}"
+          reverse: true
+          keycaps: true
+      mcu:
+        what: promicro
+        where:
           - ref: matrix_inner_home
             shift: [1U, 0.5U]
             rotate: -90
-        nets:
+        params:
           P7: matrix_pinky_top
           P18: matrix_ring_top
           P19: matrix_middle_top

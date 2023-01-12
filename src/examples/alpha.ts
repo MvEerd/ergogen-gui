@@ -3,7 +3,8 @@ import {ConfigExample} from "./index";
 const Alpha: ConfigExample = {
     label: "Alpha (staggered bottom row)",
     author: "jcmkk3",
-    value: `points:
+    value: `
+points:
   mirror:
     ref: ortho_inner_home
     distance: 1U
@@ -29,12 +30,13 @@ const Alpha: ConfigExample = {
         index:
           key.asym: left
         space:
-          spread: 0.5U
           key:
+            spread: 0.5U
             asym: right
-            width: 2
+            width: 2*(u-1)
       rows:
-        bottom.padding: 1U`
+        bottom.padding: 1U
+`
 };
 
 export default Alpha;
