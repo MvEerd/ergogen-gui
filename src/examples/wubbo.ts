@@ -3,8 +3,7 @@ import {ConfigExample} from "./index";
 const Wubbo: ConfigExample = {
     label: "Wubbo (outlines, switchplate)",
     author: "cache.works",
-    value: `
-units:
+    value: `units:
   # Parameters
   row_spacing: 1cy
 
@@ -39,13 +38,8 @@ units:
   choc_plate_thickness: 1.2
   mx_plate_thickness: 1.5
 
-  # demo.dxf multiplies key.width/height by this value
-  visual_x: 1
-  visual_y: 1
-
 points:
   rotate: 0
-  mirror:
   key: # each key across all zones will have these properties
     bind: 5
     width: choc_cap_x
