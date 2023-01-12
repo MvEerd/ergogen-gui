@@ -27,8 +27,8 @@ const Wubbo: ConfigExample = {
   inner_stagger: -5
   inner_spread: 1cx
 
-  usb_cutout_x:  47
-  usb_cutout_y: -1.27
+  usb_cutout_x:  51.64
+  usb_cutout_y: 2.10
   usb_cutout_r: -15.5
 
   # Constants
