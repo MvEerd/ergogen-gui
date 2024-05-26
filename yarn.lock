@@ -4828,10 +4828,10 @@ entities@^2.0.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
 
-ergogen@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/ergogen/-/ergogen-4.0.2.tgz#325993c0b40869b6722395c156f3fbf005c35308"
-  integrity sha512-rKyiLGuz3O9DLGl6V1EnDsaiyIXWUxjJL44zLw1zYWg1eq0EudBcI8w1hmwuIndweppdGqwuXc7nEP0BFKUXWA==
+ergogen@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ergogen/-/ergogen-4.1.0.tgz#7c3f19d52669f2ceed14da756d01953ca2e2f6dc"
+  integrity sha512-m5mfbF87tdiBjEE/WsBrNKPm+4ZoYOA+ubPTyy5JVj8+DpDUh4lf/bhxkC/gXXcgJB7SLUmNeCtS9C2ttyzAFg==
   dependencies:
     fs-extra "^11.1.0"
     js-yaml "^3.14.1"
